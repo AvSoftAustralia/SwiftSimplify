@@ -30,14 +30,14 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import UIKit
+//import UIKit
 import CoreLocation
 
 public protocol Point2DRepresentable {
     var xValue: Float { get }
     var yValue: Float { get }
     
-    var cgPoint: CGPoint { get }
+    //var cgPoint: CGPoint { get }
     
     func distanceFrom(_ otherPoint: Self) -> Float
     func distanceToSegment(_ p1: Self, _ p2: Self) -> Float
@@ -86,12 +86,14 @@ extension CLLocationCoordinate2D: Point2DRepresentable {
     public var xValue: Float { Float(latitude) }
     public var yValue: Float { Float(longitude) }
     
-    public var cgPoint: CGPoint { CGPoint(x: latitude, y: longitude) }
+    //public var cgPoint: CGPoint { CGPoint(x: latitude, y: longitude) }
 }
 
+/*
 extension CGPoint: Point2DRepresentable {
     public var xValue: Float { Float(x) }
     public var yValue: Float { Float(y) }
     
     public var cgPoint: CGPoint { self }
 }
+*/
